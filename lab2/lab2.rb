@@ -2,15 +2,14 @@
 
 puts 'Part 4: Search'
 # Part 4 Search
-def search(**params)
-  invalid_options = params.keys - %i[genre duration]
-  print 'option: ', params, "\n"
-  print "Invalid options: #{invalid_options.join(', ')}\n" unless invalid_options.empty?
+def search(genre: 'jazz', duration: 120, **params)
+  print 'genre: ', genre, ' duration: ', duration, "\n"
+  print "Invalid options: #{params.keys.join(', ')}\n" unless params.keys.empty?
 end
 
 print search genre: 'comedy'
-print search genre: 'comedy', duration: 120
-print search genre: 'comedy', duration: 120, other: 'other'
+print search genre: 'thriller', duration: 100
+print search genre: 'drama', duration: 140, other: 'other'
 
 puts "\nPart 5: Parent and Child\n"
 # Part 5 Parent Class
@@ -40,17 +39,22 @@ puts y.grade
 puts "\nPart 6: Redefining Array#map method\n"
 # Part 6 Array#map
 class Array
+  alias old_map map # save old map to use it later in part 9
   def map
     result = []
-    each { |x| result << yield(x) }
+    each { |x, _s| result << yield(x, 'hello') }
     result
   end
 end
 
-print([1, 2, 3, 4, 5].map do |x|
-  puts "#{x} - #{x * 3}"
+print([1, 2, 3, 4, 5].map do |x, s|
+  puts "#{x} - #{s} "
   x * 3
-end, "\n")
+end)
+
+# my autoformating keeps messing with this syntax, so I commented it out
+# it should work the same as the one above though. feel free to test both
+# print [1,2,3,4,5].map {|x, s| puts "#{x} - #{s} "; x*3}
 
 puts "\nPart 7: Array to Hash\n"
 # Part 7 Array to Hash
@@ -81,7 +85,7 @@ puts
 puts "\nPart 9: 52 Cards\n"
 # Part 9: 52 Cards
 def create_deck(ranks, suits)
-  suits.product(ranks).map { |s, r| [r, s] }
+  suits.product(ranks).old_map { |s, r| [r, s] }
 end
 
 suits = %w[spades hearts diamonds clubs]
@@ -170,16 +174,22 @@ class Member
 end
 
 book1 = Book.new('The Great Gatsby', 'F. Scott Fitzgerald', '9780743273565')
-# book2 = Book.new('To Kill a Mockingbird', 'Harper Lee', '9780061120081')
+book2 = Book.new('To Kill a Mockingbird', 'Harper Lee', '9780061120081')
 # book3 = Book.new('1984', 'George Orwell', '9780451524935')
 
 member1 = Member.new('John Smith', '12345')
 member2 = Member.new('Jane Doe', '67890')
 # member3 = Member.new('Bob Johnson', '13579')
 
+book1.display_info
+book2.display_info
+
 member2.borrow_book(book1)
+member1.borrow_book(book2)
 member1.return_book(book1)
 member1.borrow_book(book1)
+member1.return_book(book2)
+member2.borrow_book(book2)
 
 member1.display_info
 member2.display_info
