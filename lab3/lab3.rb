@@ -43,10 +43,25 @@ puts obj.hello('amy')
 
 print "\nStep 3\n"
 # Step 3
-require_relative 'gym'
-gym_push = Gym::Push.new
+module Gym
+  # Gym push
+  class Push
+    def up
+      40
+    end
+  end
+end
 
-require_relative 'dojo'
+module Dojo
+  # Dojo push
+  class Push
+    def up
+      30
+    end
+  end
+end
+
+gym_push = Gym::Push.new
 dojo_push = Dojo::Push.new
 
 p gym_push.up
@@ -112,6 +127,7 @@ Greetings::Hello.spanish
 
 print "\nStep 6\n"
 # Step 6
+puts 'See the code on line 131 for examples'
 /hello/ =~ '..hello...'
 /love | hate/ =~ 'I love you'
 /colou?r/ =~ '.color...'
@@ -139,7 +155,9 @@ print "\nStep 7\n"
 string = 'abc12def34ghi56jkl78mn98op76qrs'
 puts string
 puts string.gsub(/\d/, '-')
+puts string.gsub(/\d+/, '-')
 string.scan(/\d+/) { |num| print num }
 print "\n"
 puts string.scan(/\d/).first
 puts string.gsub(/\D/, '-')
+puts string.scan(/\d{2}/).join('-')
