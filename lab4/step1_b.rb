@@ -31,4 +31,4 @@ class ShoppingList
 end
 
 # Instantiate ShoppingList with shopping_items and the path to template file
-ShoppingList.new(shopping_items, 'template.erb').output('shoppinglist.html')
+ShoppingList.new(shopping_items, 'template.erb').output('shoppinglistB.html')
