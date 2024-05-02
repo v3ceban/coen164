@@ -45,7 +45,6 @@ end
 
 get '/deposit' do
   if settings.name && !settings.name.empty?
-    @balance = settings.balance
     erb :deposit
   else
     redirect '/open_account'

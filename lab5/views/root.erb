@@ -1,8 +1,8 @@
 <% if @name.nil? || @name.empty? %>
   <h2>Welcome to CSEN 164 bank!</h2>
-  <p>Please open an account to start using the bank</p>
+  <p>Please open an account to start</p>
 <% else %>
-  <h2>Welcome <%= @name %></h2>
+  <h2>Welcome, <%= @name %></h2>
   <p>Current balance: $<%= @balance %></p>
 <% end %>
 
