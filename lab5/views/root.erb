@@ -1,0 +1,20 @@
+<% if @name.nil? || @name.empty? %>
+  <h2>Welcome to CSEN 164 bank!</h2>
+  <p>Please open an account to start using the bank</p>
+<% else %>
+  <h2>Welcome <%= @name %></h2>
+  <p>Current balance: $<%= @balance %></p>
+<% end %>
+
+<nav>
+  <ul>
+  <% if @name.nil? || @name.empty? %>
+    <li><a href="/open_account">Open Account</a></li>
+  <% end %>
+  <li><a href="/deposit">Deposit</a></li>
+  <li><a href="/withdraw">Withdraw</a></li>
+  <% if !@name.nil? && !@name.empty? %>
+    <li><a href="/logout">Logout</a></li>
+  <% end %>
+  </ul>
+</nav>

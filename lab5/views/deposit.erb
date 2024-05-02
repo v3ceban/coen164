@@ -1,0 +1,23 @@
+<h2>Deposit</h2>
+<form action="/" method="post" onsubmit="return validateForm()">
+  <label>Enter the amount to deposit:
+    <input type="number" name="deposit" required />
+  </label>
+  <div class="buttons">
+    <button type="submit">Deposit</button>
+    <button type="reset" onclick="window.location.href = '/'">Cancel</button>
+  </div>
+</form>
+
+<script>
+  function validateForm() {
+  const form = document.forms[0];
+  const balance = form["deposit"].value
+  
+  if (balance < 0) {
+    alert("You can't deposit a negative amount.");
+    return false;
+  }
+  return true;
+}
+</script>

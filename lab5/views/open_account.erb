@@ -1,0 +1,43 @@
+<h2>Open Account</h2>
+<form action="/" method="post" onsubmit="return validateForm()">
+  <label>Name:
+    <input type="text" name="name" required />
+  </label>
+  <label>Account ID:
+    <input type="number" name="accountID" required />
+  </label>
+  <label>
+    Password:
+    <input type="password" name="password" required />
+  </label>
+  <div class="buttons">
+    <button type="submit">Submit</button>
+    <button type="reset" onclick="window.location.href = '/'">Cancel</button>
+  </div>
+</form>
+
+<script>
+  function validateForm() {
+  const form = document.forms[0];
+  const name = form["name"].value;
+  const accountID = form["accountID"].value;
+  const password = form["password"].value;
+  
+  if (!/^[A-Za-z ]+$/.test(name)) {
+    alert("Name can only contain letters and spaces.");
+    return false;
+  }
+  
+  if (accountID < 1) {
+    alert("AccountID must be a positive integer.");
+    return false;
+  }
+  
+  if (!/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/.test(password)) {
+    alert("Password must contain at least 1 digit, 1 lowercase letter, 1 uppercase letter and be at least 8 characters long.");
+    return false;
+  }
+  
+  return true;
+}
+</script>

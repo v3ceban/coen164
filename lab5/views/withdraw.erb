@@ -1,0 +1,30 @@
+<h2>Widraw</h2>
+<form action="/" method="post" onsubmit="return validateForm()">
+  <label>Enter the amount to withdraw:
+    <input type="number" name="withdraw" required />
+  </label>
+  <div class="buttons">
+    <button type="submit">Deposit</button>
+    <button type="reset" onclick="window.location.href = '/'">Cancel</button>
+  </div>
+</form>
+
+<script>
+  function validateForm() {
+  const form = document.forms[0];
+  const balance = form["withdraw"].value
+  const currentBalance = <%= @balance %>
+  
+  if (balance < 0) {
+    alert("You can't withdraw a negative amount.");
+    return false;
+  }
+
+  if (balance > currentBalance) {
+    alert("You can't withdraw more than you have.\nCurrent balance: " + currentBalance);
+    return false;
+  }
+
+  return true;
+}
+</script>
