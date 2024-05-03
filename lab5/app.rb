@@ -8,6 +8,8 @@ configure do
   set :password, ''
   set :balance, 0
   set :public_folder, "#{File.dirname(__FILE__)}/public"
+
+  :enable_sessions
 end
 
 get '/' do

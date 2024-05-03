@@ -17,9 +17,19 @@ footer {
 
 header {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 20px;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+header nav ul li a:link,
+header nav ul li a:visited {
+  color: #fff;
 }
 
 header img {
