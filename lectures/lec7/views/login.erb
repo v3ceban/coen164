@@ -1,0 +1,10 @@
+<h2>Please login</h2>
+<% if session[:login_fail] == true %>
+<h3>Login failed: please try again</h3>
+<% session[:login_fail] = nil %>
+<% end %>
+<form action="/auth" method="post">
+  <label>Username: <input type="text" name="username"></label>
+  <label>Password: <input type="password" name="password"></label>
+  <button type="submit">Login</button>
+</form>
