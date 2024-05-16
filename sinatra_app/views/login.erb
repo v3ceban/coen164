@@ -1,0 +1,31 @@
+<form action="/" method="POST" onsubmit="return validateForm()">
+  <label>
+    Login <input type="text" name="username">
+  </label>
+  <label>
+    Password <input type="password" name="password">
+  </label>
+  <% if @action == "login" %>
+    <button type="submit" name="login" value="true">Login</button>
+  <% elsif @action == "signup" %>
+    <label>
+      Repeat password <input type="password" name="repeat-password">
+    </label>
+    <button type="submit" name="signup" value="true">Signup</button>
+  <% end %>
+  <button type="reset" onclick="window.location.href = '/'">Cancel</button>
+</form>
+
+<script>
+  function validateForm() {
+    const form = document.forms[0];
+
+    if (form["repeat-password"]) {
+      if (form["repeat-password"].value !== form["password"].value) {
+        alert("Passwords should match!");
+        return false;
+      }
+    }
+    return true;
+  }
+</script>
