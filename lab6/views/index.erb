@@ -1,0 +1,13 @@
+<!-- views/index.erb -->
+
+<ul>
+  <% @books.each do |book| %>
+    <li><%= book.title %> - 
+           <form method="post" action="/books/delete/<%= book.id %>">
+                 <button type="submit">Delete</button>
+           </form>
+    </li>
+  <% end %>
+</ul>
+
+<a href="/books/new">Add new book</a>
