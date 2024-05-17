@@ -1,4 +1,7 @@
 <h2>Welcome to Frank Sinatra's gambling site</h2>
+<% if session[:error] %>
+  <h3><%= session.delete(:error) %></h3>
+<% end %>
 <ul>
   <li>
     <a href="login?action=login">Login</a> to play

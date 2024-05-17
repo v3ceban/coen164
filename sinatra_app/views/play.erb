@@ -1,0 +1,34 @@
+<% user = session[:user] %>
+<% score = session[:score] %>
+<section>
+  <h2>Hi, <%= session[:user].username %>, let's play!</h2>
+  <h3>Place your bet on dice number (1 to 6)</h3>
+  <form action='/play/result' method="POST">
+    <label>
+      Bet money <input type="number" name="bet" min="1" max="1000" value="100" required>$
+    </label>
+    <label>
+      On <input type="number" name="guess" min="1" max="6" value="1" required>
+    </label>
+    <button type="submit">Gamble!</button>
+  </form>
+</section>
+<aside>
+  <h2>Session Info</h2>
+  <ul>
+    <li>Session win: <%= score.win %></li>
+    <li>Session loss: <%= score.loss %></li>
+    <li>Session profit: <%= score.profit %>$</li>
+  </ul>
+</aside>
+<section>
+  <h2>Account Info</h2>
+  <ul>
+    <li>Total win: <%= user.total_win %></li>
+    <li>Total loss: <%= user.total_loss %></li>
+    <li>Total profit: <%= user.total_profit %>$</li>
+  </ul>
+</section>
+<form action='/' method="POST">
+  <button type="submit" name="logout" value="true">Logout</button>
+</form>
