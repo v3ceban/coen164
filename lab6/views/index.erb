@@ -2,7 +2,7 @@
 
 <ul>
   <% @books.each do |book| %>
-    <li><%= book.title %> - 
+    <li><%= book.title %> - <%= book.author %> - <%= book.year %> - <%= book.description %>
            <form method="post" action="/books/delete/<%= book.id %>">
                  <button type="submit">Delete</button>
            </form>
