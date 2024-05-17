@@ -1,7 +1,17 @@
 <% user = session[:user] %>
 <% score = session[:score] %>
+<% game = session[:game] %>
+<h2>Hi, <%= session[:user].username %>, let's play!</h2>
+<% if session[:game] %>
+  <section>
+    <h3>Game Result</h3>
+    <p>You <%= session[:game].result ? "won #{session[:game].bet * 6}$! :)" : "lost #{session[:game].bet}$ :(" %></p>
+    <p>Your guess: <%= game.guess %></p>
+    <p>Dice rolled: <%= game.random %></p>
+  </section>
+<% session[:game] = nil %>
+<% end %>
 <section>
-  <h2>Hi, <%= session[:user].username %>, let's play!</h2>
   <h3>Place your bet on dice number (1 to 6)</h3>
   <form action='/play/result' method="POST">
     <label>

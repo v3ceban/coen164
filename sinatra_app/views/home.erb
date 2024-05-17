@@ -1,6 +1,6 @@
 <h2>Welcome to Frank Sinatra's gambling site</h2>
 <% if session[:error] %>
-  <h3><%= session.delete(:error) %></h3>
+  <h3 class="error"><%= session.delete(:error) %></h3>
 <% end %>
 <ul>
   <li>

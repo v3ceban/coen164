@@ -7,6 +7,7 @@ require 'sinatra/reloader'
 
 configure do
   set :database, { adapter: 'sqlite3', database: 'sqlite3.db' }
+  set :public_folder, "#{File.dirname(__FILE__)}/public"
   enable :sessions
 end
 
@@ -30,6 +31,23 @@ class Score
     user.total_loss += loss
     user.total_profit += profit
     user.save
+  end
+end
+
+# Define game that stores values and defines result
+class Game
+  attr_accessor :guess, :bet, :random, :result
+
+  def initialize(params)
+    @bet = params[:bet].to_i
+    @guess = params[:guess].to_i
+    @random = nil
+    @result = nil
+  end
+
+  def play
+    @random = rand(1..6)
+    @result = @random == @guess
   end
 end
 
@@ -88,18 +106,18 @@ end
 post '/play/result' do
   redirect '/' unless session[:user]
 
-  bet = params[:bet].to_i
-  guess = params[:guess].to_i
+  session[:game] = Game.new(params)
   score = session[:score]
-  random = rand(1..6)
-  result = random == guess
+  bet = session[:game].bet
 
-  if result
+  session[:game].play
+
+  if session[:game].result
     score.win += 1
     score.profit += bet * 6
   else
     score.loss += 1
     score.profit -= bet
   end
-  redirect "/play?result=#{result}"
+  redirect '/play'
 end
