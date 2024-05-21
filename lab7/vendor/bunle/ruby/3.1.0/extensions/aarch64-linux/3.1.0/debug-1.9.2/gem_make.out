@@ -1,0 +1,19 @@
+current directory: /home/v3ceban/Development/coen164/lab7/vendor/bunle/ruby/3.1.0/gems/debug-1.9.2/ext/debug
+/usr/bin/ruby3.1 -I/usr/lib/ruby/vendor_ruby extconf.rb
+creating Makefile
+
+current directory: /home/v3ceban/Development/coen164/lab7/vendor/bunle/ruby/3.1.0/gems/debug-1.9.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240520-10992-wzjayq sitelibdir\=./.gem.20240520-10992-wzjayq clean
+
+current directory: /home/v3ceban/Development/coen164/lab7/vendor/bunle/ruby/3.1.0/gems/debug-1.9.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240520-10992-wzjayq sitelibdir\=./.gem.20240520-10992-wzjayq
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.so
+
+current directory: /home/v3ceban/Development/coen164/lab7/vendor/bunle/ruby/3.1.0/gems/debug-1.9.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240520-10992-wzjayq sitelibdir\=./.gem.20240520-10992-wzjayq install
+/usr/bin/install -c -m 0755 debug.so ./.gem.20240520-10992-wzjayq/debug
+
+current directory: /home/v3ceban/Development/coen164/lab7/vendor/bunle/ruby/3.1.0/gems/debug-1.9.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240520-10992-wzjayq sitelibdir\=./.gem.20240520-10992-wzjayq clean

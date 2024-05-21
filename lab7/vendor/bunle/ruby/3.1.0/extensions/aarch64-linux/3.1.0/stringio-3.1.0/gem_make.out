@@ -1,0 +1,18 @@
+current directory: /home/v3ceban/Development/coen164/lab7/vendor/bunle/ruby/3.1.0/gems/stringio-3.1.0/ext/stringio
+/usr/bin/ruby3.1 -I/usr/lib/ruby/vendor_ruby extconf.rb
+creating Makefile
+
+current directory: /home/v3ceban/Development/coen164/lab7/vendor/bunle/ruby/3.1.0/gems/stringio-3.1.0/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20240520-10992-qi751t sitelibdir\=./.gem.20240520-10992-qi751t clean
+
+current directory: /home/v3ceban/Development/coen164/lab7/vendor/bunle/ruby/3.1.0/gems/stringio-3.1.0/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20240520-10992-qi751t sitelibdir\=./.gem.20240520-10992-qi751t
+compiling stringio.c
+linking shared-object stringio.so
+
+current directory: /home/v3ceban/Development/coen164/lab7/vendor/bunle/ruby/3.1.0/gems/stringio-3.1.0/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20240520-10992-qi751t sitelibdir\=./.gem.20240520-10992-qi751t install
+/usr/bin/install -c -m 0755 stringio.so ./.gem.20240520-10992-qi751t
+
+current directory: /home/v3ceban/Development/coen164/lab7/vendor/bunle/ruby/3.1.0/gems/stringio-3.1.0/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20240520-10992-qi751t sitelibdir\=./.gem.20240520-10992-qi751t clean

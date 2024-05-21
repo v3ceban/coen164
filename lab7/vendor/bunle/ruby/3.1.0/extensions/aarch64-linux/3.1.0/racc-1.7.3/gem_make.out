@@ -1,0 +1,18 @@
+current directory: /home/v3ceban/Development/coen164/lab7/vendor/bunle/ruby/3.1.0/gems/racc-1.7.3/ext/racc/cparse
+/usr/bin/ruby3.1 -I/usr/lib/ruby/vendor_ruby extconf.rb
+creating Makefile
+
+current directory: /home/v3ceban/Development/coen164/lab7/vendor/bunle/ruby/3.1.0/gems/racc-1.7.3/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240520-10992-l1y9fg sitelibdir\=./.gem.20240520-10992-l1y9fg clean
+
+current directory: /home/v3ceban/Development/coen164/lab7/vendor/bunle/ruby/3.1.0/gems/racc-1.7.3/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240520-10992-l1y9fg sitelibdir\=./.gem.20240520-10992-l1y9fg
+compiling cparse.c
+linking shared-object racc/cparse.so
+
+current directory: /home/v3ceban/Development/coen164/lab7/vendor/bunle/ruby/3.1.0/gems/racc-1.7.3/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240520-10992-l1y9fg sitelibdir\=./.gem.20240520-10992-l1y9fg install
+/usr/bin/install -c -m 0755 cparse.so ./.gem.20240520-10992-l1y9fg/racc
+
+current directory: /home/v3ceban/Development/coen164/lab7/vendor/bunle/ruby/3.1.0/gems/racc-1.7.3/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240520-10992-l1y9fg sitelibdir\=./.gem.20240520-10992-l1y9fg clean
