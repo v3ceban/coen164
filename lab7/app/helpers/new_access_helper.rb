@@ -1,0 +1,2 @@
+module NewAccessHelper
+end

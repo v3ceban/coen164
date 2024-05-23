@@ -1,0 +1,9 @@
+<% if flash[:notice] %>
+<h2> <%= flash[:notice] %></h2>
+<% end %>
+<h1>please login</h1>
+<form action='/access/authenticate' method="getx">
+  <input type="text" name="userid"><br>
+  <input type="password" name="password"><br>
+  <input type="submit" value="login">
+</form>
