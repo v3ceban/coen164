@@ -3,16 +3,16 @@ current directory: /home/v3ceban/Development/coen164/lab7/vendor/bunle/ruby/3.1.
 creating Makefile
 
 current directory: /home/v3ceban/Development/coen164/lab7/vendor/bunle/ruby/3.1.0/gems/bindex-0.8.1/ext/skiptrace
-make DESTDIR\= sitearchdir\=./.gem.20240520-10992-hvolcg sitelibdir\=./.gem.20240520-10992-hvolcg clean
+make DESTDIR\= sitearchdir\=./.gem.20240523-3416-69lcfk sitelibdir\=./.gem.20240523-3416-69lcfk clean
 
 current directory: /home/v3ceban/Development/coen164/lab7/vendor/bunle/ruby/3.1.0/gems/bindex-0.8.1/ext/skiptrace
-make DESTDIR\= sitearchdir\=./.gem.20240520-10992-hvolcg sitelibdir\=./.gem.20240520-10992-hvolcg
+make DESTDIR\= sitearchdir\=./.gem.20240523-3416-69lcfk sitelibdir\=./.gem.20240523-3416-69lcfk
 compiling cruby.c
 linking shared-object skiptrace/internal/cruby.so
 
 current directory: /home/v3ceban/Development/coen164/lab7/vendor/bunle/ruby/3.1.0/gems/bindex-0.8.1/ext/skiptrace
-make DESTDIR\= sitearchdir\=./.gem.20240520-10992-hvolcg sitelibdir\=./.gem.20240520-10992-hvolcg install
-/usr/bin/install -c -m 0755 cruby.so ./.gem.20240520-10992-hvolcg/skiptrace/internal
+make DESTDIR\= sitearchdir\=./.gem.20240523-3416-69lcfk sitelibdir\=./.gem.20240523-3416-69lcfk install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20240523-3416-69lcfk/skiptrace/internal
 
 current directory: /home/v3ceban/Development/coen164/lab7/vendor/bunle/ruby/3.1.0/gems/bindex-0.8.1/ext/skiptrace
-make DESTDIR\= sitearchdir\=./.gem.20240520-10992-hvolcg sitelibdir\=./.gem.20240520-10992-hvolcg clean
+make DESTDIR\= sitearchdir\=./.gem.20240523-3416-69lcfk sitelibdir\=./.gem.20240523-3416-69lcfk clean

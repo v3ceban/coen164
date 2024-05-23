@@ -32,17 +32,17 @@ checking for RB_WARN_CATEGORY_DEPRECATED in ruby.h... yes
 creating Makefile
 
 current directory: /home/v3ceban/Development/coen164/lab7/vendor/bunle/ruby/3.1.0/gems/bigdecimal-3.1.8/ext/bigdecimal
-make DESTDIR\= sitearchdir\=./.gem.20240520-10992-3li39t sitelibdir\=./.gem.20240520-10992-3li39t clean
+make DESTDIR\= sitearchdir\=./.gem.20240523-3416-55zsmg sitelibdir\=./.gem.20240523-3416-55zsmg clean
 
 current directory: /home/v3ceban/Development/coen164/lab7/vendor/bunle/ruby/3.1.0/gems/bigdecimal-3.1.8/ext/bigdecimal
-make DESTDIR\= sitearchdir\=./.gem.20240520-10992-3li39t sitelibdir\=./.gem.20240520-10992-3li39t
+make DESTDIR\= sitearchdir\=./.gem.20240523-3416-55zsmg sitelibdir\=./.gem.20240523-3416-55zsmg
 compiling bigdecimal.c
 compiling missing.c
 linking shared-object bigdecimal.so
 
 current directory: /home/v3ceban/Development/coen164/lab7/vendor/bunle/ruby/3.1.0/gems/bigdecimal-3.1.8/ext/bigdecimal
-make DESTDIR\= sitearchdir\=./.gem.20240520-10992-3li39t sitelibdir\=./.gem.20240520-10992-3li39t install
-/usr/bin/install -c -m 0755 bigdecimal.so ./.gem.20240520-10992-3li39t
+make DESTDIR\= sitearchdir\=./.gem.20240523-3416-55zsmg sitelibdir\=./.gem.20240523-3416-55zsmg install
+/usr/bin/install -c -m 0755 bigdecimal.so ./.gem.20240523-3416-55zsmg
 
 current directory: /home/v3ceban/Development/coen164/lab7/vendor/bunle/ruby/3.1.0/gems/bigdecimal-3.1.8/ext/bigdecimal
-make DESTDIR\= sitearchdir\=./.gem.20240520-10992-3li39t sitelibdir\=./.gem.20240520-10992-3li39t clean
+make DESTDIR\= sitearchdir\=./.gem.20240523-3416-55zsmg sitelibdir\=./.gem.20240523-3416-55zsmg clean

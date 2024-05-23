@@ -5,16 +5,16 @@ checking for rb_reg_onig_match() in ruby.h... no
 creating Makefile
 
 current directory: /home/v3ceban/Development/coen164/lab7/vendor/bunle/ruby/3.1.0/gems/strscan-3.1.0/ext/strscan
-make DESTDIR\= sitearchdir\=./.gem.20240520-10992-gqmaub sitelibdir\=./.gem.20240520-10992-gqmaub clean
+make DESTDIR\= sitearchdir\=./.gem.20240523-3416-g4iysx sitelibdir\=./.gem.20240523-3416-g4iysx clean
 
 current directory: /home/v3ceban/Development/coen164/lab7/vendor/bunle/ruby/3.1.0/gems/strscan-3.1.0/ext/strscan
-make DESTDIR\= sitearchdir\=./.gem.20240520-10992-gqmaub sitelibdir\=./.gem.20240520-10992-gqmaub
+make DESTDIR\= sitearchdir\=./.gem.20240523-3416-g4iysx sitelibdir\=./.gem.20240523-3416-g4iysx
 compiling strscan.c
 linking shared-object strscan.so
 
 current directory: /home/v3ceban/Development/coen164/lab7/vendor/bunle/ruby/3.1.0/gems/strscan-3.1.0/ext/strscan
-make DESTDIR\= sitearchdir\=./.gem.20240520-10992-gqmaub sitelibdir\=./.gem.20240520-10992-gqmaub install
-/usr/bin/install -c -m 0755 strscan.so ./.gem.20240520-10992-gqmaub
+make DESTDIR\= sitearchdir\=./.gem.20240523-3416-g4iysx sitelibdir\=./.gem.20240523-3416-g4iysx install
+/usr/bin/install -c -m 0755 strscan.so ./.gem.20240523-3416-g4iysx
 
 current directory: /home/v3ceban/Development/coen164/lab7/vendor/bunle/ruby/3.1.0/gems/strscan-3.1.0/ext/strscan
-make DESTDIR\= sitearchdir\=./.gem.20240520-10992-gqmaub sitelibdir\=./.gem.20240520-10992-gqmaub clean
+make DESTDIR\= sitearchdir\=./.gem.20240523-3416-g4iysx sitelibdir\=./.gem.20240523-3416-g4iysx clean

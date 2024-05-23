@@ -6,10 +6,10 @@ checking for altzone in time.h with  -Werror... no
 creating Makefile
 
 current directory: /home/v3ceban/Development/coen164/lab7/vendor/bunle/ruby/3.1.0/gems/date-3.3.4/ext/date
-make DESTDIR\= sitearchdir\=./.gem.20240520-10992-rs3jca sitelibdir\=./.gem.20240520-10992-rs3jca clean
+make DESTDIR\= sitearchdir\=./.gem.20240523-3416-3kge4g sitelibdir\=./.gem.20240523-3416-3kge4g clean
 
 current directory: /home/v3ceban/Development/coen164/lab7/vendor/bunle/ruby/3.1.0/gems/date-3.3.4/ext/date
-make DESTDIR\= sitearchdir\=./.gem.20240520-10992-rs3jca sitelibdir\=./.gem.20240520-10992-rs3jca
+make DESTDIR\= sitearchdir\=./.gem.20240523-3416-3kge4g sitelibdir\=./.gem.20240523-3416-3kge4g
 compiling date_core.c
 compiling date_parse.c
 compiling date_strftime.c
@@ -17,8 +17,8 @@ compiling date_strptime.c
 linking shared-object date_core.so
 
 current directory: /home/v3ceban/Development/coen164/lab7/vendor/bunle/ruby/3.1.0/gems/date-3.3.4/ext/date
-make DESTDIR\= sitearchdir\=./.gem.20240520-10992-rs3jca sitelibdir\=./.gem.20240520-10992-rs3jca install
-/usr/bin/install -c -m 0755 date_core.so ./.gem.20240520-10992-rs3jca
+make DESTDIR\= sitearchdir\=./.gem.20240523-3416-3kge4g sitelibdir\=./.gem.20240523-3416-3kge4g install
+/usr/bin/install -c -m 0755 date_core.so ./.gem.20240523-3416-3kge4g
 
 current directory: /home/v3ceban/Development/coen164/lab7/vendor/bunle/ruby/3.1.0/gems/date-3.3.4/ext/date
-make DESTDIR\= sitearchdir\=./.gem.20240520-10992-rs3jca sitelibdir\=./.gem.20240520-10992-rs3jca clean
+make DESTDIR\= sitearchdir\=./.gem.20240523-3416-3kge4g sitelibdir\=./.gem.20240523-3416-3kge4g clean

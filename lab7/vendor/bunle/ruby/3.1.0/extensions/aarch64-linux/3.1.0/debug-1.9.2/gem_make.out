@@ -3,17 +3,17 @@ current directory: /home/v3ceban/Development/coen164/lab7/vendor/bunle/ruby/3.1.
 creating Makefile
 
 current directory: /home/v3ceban/Development/coen164/lab7/vendor/bunle/ruby/3.1.0/gems/debug-1.9.2/ext/debug
-make DESTDIR\= sitearchdir\=./.gem.20240520-10992-wzjayq sitelibdir\=./.gem.20240520-10992-wzjayq clean
+make DESTDIR\= sitearchdir\=./.gem.20240523-3416-1s9o34 sitelibdir\=./.gem.20240523-3416-1s9o34 clean
 
 current directory: /home/v3ceban/Development/coen164/lab7/vendor/bunle/ruby/3.1.0/gems/debug-1.9.2/ext/debug
-make DESTDIR\= sitearchdir\=./.gem.20240520-10992-wzjayq sitelibdir\=./.gem.20240520-10992-wzjayq
+make DESTDIR\= sitearchdir\=./.gem.20240523-3416-1s9o34 sitelibdir\=./.gem.20240523-3416-1s9o34
 compiling debug.c
 compiling iseq_collector.c
 linking shared-object debug/debug.so
 
 current directory: /home/v3ceban/Development/coen164/lab7/vendor/bunle/ruby/3.1.0/gems/debug-1.9.2/ext/debug
-make DESTDIR\= sitearchdir\=./.gem.20240520-10992-wzjayq sitelibdir\=./.gem.20240520-10992-wzjayq install
-/usr/bin/install -c -m 0755 debug.so ./.gem.20240520-10992-wzjayq/debug
+make DESTDIR\= sitearchdir\=./.gem.20240523-3416-1s9o34 sitelibdir\=./.gem.20240523-3416-1s9o34 install
+/usr/bin/install -c -m 0755 debug.so ./.gem.20240523-3416-1s9o34/debug
 
 current directory: /home/v3ceban/Development/coen164/lab7/vendor/bunle/ruby/3.1.0/gems/debug-1.9.2/ext/debug
-make DESTDIR\= sitearchdir\=./.gem.20240520-10992-wzjayq sitelibdir\=./.gem.20240520-10992-wzjayq clean
+make DESTDIR\= sitearchdir\=./.gem.20240523-3416-1s9o34 sitelibdir\=./.gem.20240523-3416-1s9o34 clean
