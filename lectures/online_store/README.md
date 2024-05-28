@@ -22,3 +22,33 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+## App description
+
+Online store with products. Each product has:
+
+- Name
+- Description
+- Image
+- Price
+
+The app has a view for admin and for user.
+
+### Admin view
+
+Admin view is under product controller. It has the following actions on product (scaffold):
+
+- index
+- new
+- show
+- create
+- edit
+- update
+- destroy
+
+### User view
+
+User view is under product controller. It has the following actions on product:
+
+- index
+- add_to_cart
