@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Controller for the shop
-class ShoperController < ApplicationController
+class ShopperController < ApplicationController
   def index
     @products = Product.all
   end

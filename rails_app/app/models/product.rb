@@ -6,4 +6,6 @@ class Product < ApplicationRecord
   validates :price, numericality: { greater_than: 0 }
   validates :image, format: { with: /\.(gif|jpg|png)\Z/i, message: 'must be a URL for GIF, JPG or PNG image.' }
   validates :name, uniqueness: true
+
+  has_many :lineitems
 end

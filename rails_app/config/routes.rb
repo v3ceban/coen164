@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  get '/' => 'shoper#index'
-  get 'shoper/index'
+  resources :lineitems
+  resources :carts
+  get '/' => 'shopper#index'
+  get 'shopper/index'
   resources :products
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

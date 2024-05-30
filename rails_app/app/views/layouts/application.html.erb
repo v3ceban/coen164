@@ -11,6 +11,19 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <h1>Header</h1>
+    </header>
+    <main>
+      <aside>
+        <h2>Aside</h2>
+      </aside>
+      <section class="main-content">
+        <%= yield %>
+      </section>
+    </main>
+    <footer>
+      <h2>Footer</h2>
+    </footer>
   </body>
 </html>
