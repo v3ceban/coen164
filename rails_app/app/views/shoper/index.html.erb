@@ -1,0 +1,20 @@
+<% @products.each do |product| %>
+  <div id="product-<%= product.id %>" class="<%= cycle("list_line_odd", "list_line_even") %>">
+    <p>
+      <strong>Name:</strong>
+      <%= product.name %>
+    </p>
+    <p>
+      <strong>Description:</strong>
+      <%= product.description %>
+    </p>
+    <p>
+      <strong>Image:</strong>
+      <%= image_tag(product.image, alt: product.name) %>
+    </p>
+    <p>
+      <strong>Price:</strong>
+      <%= product.price %>
+    </p>
+  </div>
+<% end %>
