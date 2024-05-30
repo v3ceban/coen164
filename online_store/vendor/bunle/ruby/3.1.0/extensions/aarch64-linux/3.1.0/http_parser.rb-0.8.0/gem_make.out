@@ -1,0 +1,19 @@
+current directory: /home/v3ceban/Development/coen164/online_store/vendor/bunle/ruby/3.1.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
+/usr/bin/ruby3.1 -I/usr/lib/ruby/vendor_ruby extconf.rb
+creating Makefile
+
+current directory: /home/v3ceban/Development/coen164/online_store/vendor/bunle/ruby/3.1.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
+make DESTDIR\= sitearchdir\=./.gem.20240530-29413-k6tpfl sitelibdir\=./.gem.20240530-29413-k6tpfl clean
+
+current directory: /home/v3ceban/Development/coen164/online_store/vendor/bunle/ruby/3.1.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
+make DESTDIR\= sitearchdir\=./.gem.20240530-29413-k6tpfl sitelibdir\=./.gem.20240530-29413-k6tpfl
+compiling ruby_http_parser.c
+compiling ryah_http_parser.c
+linking shared-object ruby_http_parser.so
+
+current directory: /home/v3ceban/Development/coen164/online_store/vendor/bunle/ruby/3.1.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
+make DESTDIR\= sitearchdir\=./.gem.20240530-29413-k6tpfl sitelibdir\=./.gem.20240530-29413-k6tpfl install
+/usr/bin/install -c -m 0755 ruby_http_parser.so ./.gem.20240530-29413-k6tpfl
+
+current directory: /home/v3ceban/Development/coen164/online_store/vendor/bunle/ruby/3.1.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
+make DESTDIR\= sitearchdir\=./.gem.20240530-29413-k6tpfl sitelibdir\=./.gem.20240530-29413-k6tpfl clean

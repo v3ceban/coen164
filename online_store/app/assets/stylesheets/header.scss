@@ -1,0 +1,36 @@
+@import "variables";
+
+header {
+  background-color: $black;
+  color: $white;
+  padding: 20px;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      display: flex;
+      align-items: center;
+
+      img {
+        max-width: 75px;
+        margin-right: 10px;
+        border-radius: 50%;
+      }
+    }
+
+    ul {
+      display: flex;
+
+      li {
+        margin: 0 10px;
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
