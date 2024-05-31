@@ -3,12 +3,20 @@
 main {
   padding: 20px;
 
-  form {
+  .container {
     max-width: 600px;
+    margin: 20px auto;
+  }
+
+  form {
+    width: 100%;
+
+    label {
+      font-weight: 700;
+    }
 
     input,
     label,
-    select,
     textarea,
     button {
       display: block;
@@ -16,8 +24,28 @@ main {
       width: 100%;
     }
 
-    select {
-      height: 28px;
+    .selections {
+      display: flex;
+
+      .input {
+        margin-right: 30px;
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+
+        select {
+          height: 28px;
+        }
+
+        #product_price {
+          max-width: 100px;
+        }
+      }
+    }
+
+    textarea {
+      height: 150px;
     }
 
     input[type="checkbox"],
@@ -25,6 +53,10 @@ main {
       display: inline-block;
       margin-right: 5px;
       width: auto;
+    }
+
+    .input {
+      margin-bottom: 10px;
     }
 
     button,
@@ -49,5 +81,15 @@ main {
     padding: 10px 0;
     border-radius: 5px;
     font-weight: 700;
+  }
+
+  .account {
+    .selections {
+      justify-content: space-between;
+
+      .input {
+        width: 50%;
+      }
+    }
   }
 }

@@ -1,18 +1,22 @@
 <%= simple_form_for(@product) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-
   <div class="form-inputs">
     <%= f.input :name, required: true %>
-    <label for="category"><abbr title="required">*</abbr> Category</label>
-    <%= f.input_field :category, collection: Product::CATEGORY, required: true, id: "category", prompt: "Select" %>
     <%= f.input :description, required: true %>
-    <label for="condition"><abbr title="required">*</abbr> Condition</label>
-    <%= f.input_field :condition, collection: Product::CONDITION, required: true, id: "condition", prompt: "Select" %>
-    <%= f.input :price, required: true %>
-    <%= f.input :image, as: :file, required: true  %>
+    <section class="selections">
+      <div class="input">
+        <label for="category"><abbr title="required">*</abbr> Category</label>
+        <%= f.input_field :category, collection: Product::CATEGORY, required: true, id: "category", prompt: "Select" %>
+      </div>
+      <div class="input">
+        <label for="condition"><abbr title="required">*</abbr> Condition</label>
+        <%= f.input_field :condition, collection: Product::CONDITION, required: true, id: "condition", prompt: "Select" %>
+      </div>
+      <%= f.input :price, required: true %>
+      <%= f.input :image, as: :file, required: true  %>
+    </section>
   </div>
-
   <div class="form-actions">
     <%= f.button :submit %>
   </div>

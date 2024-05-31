@@ -1,40 +1,39 @@
-<h2>Hi, <%= resource.name.to_s.humanize %>! We're happy to see you again.</h2>
-
-<h3>Edit my account</h3>
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= f.error_notification %>
-
-  <section class="form-inputs">
-    <%= f.input :name,
-                required: true,
-                autofocus: true %>
-    <%= f.input :email,
-                required: true,
-                autofocus: true %>
-
-    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-      <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
-    <% end %>
-
-    <%= f.input :password,
-                required: false,
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: false,
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :current_password,
-                required: true,
-                input_html: { autocomplete: "current-password" } %>
+<section class="container">
+  <h2>Hi, <%= resource.name.to_s.humanize %>! We're happy to see you again.</h2>
+  <h3>Edit my account</h3>
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    <%= f.error_notification %>
+    <section class="form-inputs account">
+      <section class="selections">
+        <%= f.input :name,
+                    required: true,
+                    autofocus: true %>
+        <%= f.input :email,
+                    required: true,
+                    autofocus: true %>
+      </section>
+      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+        <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+      <% end %>
+      <section class="selections">
+        <%= f.input :password,
+                    required: false,
+                    input_html: { autocomplete: "new-password" } %>
+        <%= f.input :password_confirmation,
+                    required: false,
+                    input_html: { autocomplete: "new-password" } %>
+      </section>
+      <%= f.input :current_password,
+                  required: true,
+                  input_html: { autocomplete: "current-password" } %>
+    </section>
+    <section class="form-actions">
+      <%= f.button :submit, "Update" %>
+    </section>
+  <% end %>
+  <section style="margin-top: 40px">
+    <h3>Delete my account</h3>
+    <p>Unhappy with our service?</p>
+    <%= button_to "Delete my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete, class: "danger" %>
   </section>
-
-  <section class="form-actions">
-    <%= f.button :submit, "Update" %>
-  </section>
-<% end %>
-
-
-<section>
-  <h3>Delete my account</h3>
-  <p>Unhappy with our service?</p>
-  <%= button_to "Delete my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete, class: "danger" %>
 </section>

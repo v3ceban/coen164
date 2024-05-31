@@ -1,9 +1,7 @@
-<h1>New product</h1>
-
-<%= render "form", product: @product %>
-
-<br>
-
-<div>
-  <%= link_to "Back to products", products_path %>
-</div>
+<section class="container">
+  <h2>New product</h2>
+  <%= render "form", product: @product %>
+  <div>
+    <%= button_to "Cancel", products_path, method: :get, class: "warning" %>
+  </div>
+</section>

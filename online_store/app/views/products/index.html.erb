@@ -1,12 +1,10 @@
-<h1>Products</h1>
-<% if current_user && current_user.admin? %>
-  <h2>Admin View</h2>
-<% end %>
+<h2>Products</h2>
 <div id="products">
   <% @products.each do |product| %>
-    <%= render product %>
-    <p>
-      <%= link_to "Show this product", product %>
-    </p>
+    <section class="product">
+      <%= render product %>
+      <%= button_to "Show Product", product, method: :get %>
+    </section>
   <% end %>
 </div>
+

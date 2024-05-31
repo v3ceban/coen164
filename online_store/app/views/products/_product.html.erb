@@ -1,31 +1,21 @@
-<div id="<%= dom_id product %>">
-  <p>
-    <strong>Name:</strong>
+<div id="<%= dom_id product %>" class="product">
+  <h3>
     <%= product.name %>
-  </p>
-
+  </h3>
   <p>
-    <strong>Category:</strong>
-    <%= product.category %>
-  </p>
-
-  <p>
-    <strong>Description:</strong>
     <%= product.description %>
   </p>
-
-  <p>
-    <strong>Condition:</strong>
-    <%= product.condition %>
-  </p>
-
-  <p>
-    <strong>Price:</strong>
-    <%= product.price %>
-  </p>
-
-  <p>
-    <strong>Image:</strong>
-    <img src="<%= product.image %>" alt="<%= product.name %>">
-  </p>
+  <img src="<%= product.image %>" alt="<%= product.name %>">
+  <section class="meta">
+    <span>
+      <strong>Category:</strong> <%= product.category %>
+    </span>
+    <span>
+      <strong>Condition:</strong> <%= product.condition %>
+    </span>
+    <span>
+      <strong>Price:</strong> $<%= product.price %>
+    </span>
+  </section>
+  <%= button_to "Add to Cart", root_path, method: :post, class: "ok" %>
 </div>
