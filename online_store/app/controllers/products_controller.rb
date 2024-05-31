@@ -8,7 +8,7 @@ class ProductsController < ApplicationController
 
   # GET /products or /products.json
   def index
-    @products = Product.all
+    @products = Product.all.order(created_at: :desc)
   end
 
   # GET /products/1 or /products/1.json
@@ -16,7 +16,7 @@ class ProductsController < ApplicationController
 
   # GET /products/new
   def new
-    @product = Product.new
+    @product = current_user.products.build
   end
 
   # GET /products/1/edit
@@ -24,8 +24,8 @@ class ProductsController < ApplicationController
 
   # POST /products or /products.json
   def create
-    @product = Product.new(product_params)
-    @product.user_id = current_user.id
+    @product = current_user.products.build(product_params)
+    # @product.user_id = current_user.id
 
     respond_to do |format|
       if @product.save
@@ -70,7 +70,7 @@ class ProductsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def product_params
-    params.require(:product).permit(:name, :category, :description, :condition, :price)
+    params.require(:product).permit(:name, :category, :description, :condition, :price, :image)
   end
 
   def check_access

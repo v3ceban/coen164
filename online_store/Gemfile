@@ -6,7 +6,7 @@ ruby '3.1.2'
 gem 'carrierwave'
 # User authentication
 gem 'devise'
-# User uploaded images manipulation
+# User uploaded images dependency
 gem 'mini_magick'
 # Use Sass to process CSS
 gem 'sassc-rails'

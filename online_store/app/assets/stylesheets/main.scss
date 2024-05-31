@@ -16,6 +16,10 @@ main {
       width: 100%;
     }
 
+    select {
+      height: 28px;
+    }
+
     input[type="checkbox"],
     input[type="radio"] {
       display: inline-block;
