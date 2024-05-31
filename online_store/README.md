@@ -11,3 +11,9 @@
 - Database initialization `rails db:seed`
 
 - Special thanks: Andy Leverenz from Webcrunch YouTube channel for the tutorial.
+
+## TODO
+
+- Add cart and checkout
+
+- Add search functionality (js filter or a new view)
