@@ -1,11 +1,33 @@
 #products {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 20px 10px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px 40px;
 
-  .product {
-    img {
-      height: 450px;
+  >.product {
+    max-width: 350px;
+    background-color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+
+    >.product {
+      padding: 0;
+      border-radius: 0;
+      max-width: 100%;
     }
+
+    >form {
+      button {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  img {
+    height: 450px;
+  }
+
+  .meta {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }

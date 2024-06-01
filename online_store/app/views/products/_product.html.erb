@@ -1,11 +1,23 @@
 <div id="<%= dom_id product %>" class="product">
   <h3>
-    <%= product.name %>
+    <% if !current_page?(product_path(product)) %>
+      <a href="<%= product_path(product) %>">
+        <%= product.name %>
+      </a>
+    <% else %>
+      <%= product.name %>
+    <% end %>
   </h3>
   <p>
     <%= product.description %>
   </p>
-  <img src="<%= product.image %>" alt="<%= product.name %>">
+  <% if !current_page?(product_path(product)) %>
+    <a href="<%= product_path(product) %>">
+      <img src="<%= product.image %>" alt="<%= product.name %>">
+    </a>
+  <% else %>
+    <img src="<%= product.image %>" alt="<%= product.name %>">
+  <% end %>
   <section class="meta">
     <span>
       <strong>Category:</strong> <%= product.category %>
@@ -15,6 +27,9 @@
     </span>
     <span>
       <strong>Price:</strong> $<%= product.price %>
+    </span>
+    <span>
+      <strong>Sold By:</strong> <%= product.user.name %>
     </span>
   </section>
   <%= button_to "Add to Cart", root_path, method: :post, class: "ok" %>
