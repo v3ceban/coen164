@@ -32,5 +32,5 @@
       <strong>Sold By:</strong> <%= product.user.name %>
     </span>
   </section>
-  <%= button_to "Add to Cart", root_path, method: :post, class: "ok" %>
+  <%= button_to "Add to Cart", line_items_path(product_id: product), method: :post, class: "ok" %>
 </div>
