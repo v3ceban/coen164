@@ -1,0 +1,6 @@
+<section class="container">
+  <h2>Checkout</h2>
+  <%= render "checkout_form", cart: @cart %>
+  <%= button_to 'Cancel', cart_path(@cart), method: :get, class: "warning" %>
+  <%= button_to 'Keep Shopping', products_path, method: :get %>
+</section>

@@ -1,17 +1,14 @@
-<div>
-  <%= link_to 'Keep Shopping', products_path %>
-</div>
-<section>
+<h2>Cart</h2>
+<h3>Total Price: $<%= @cart.total_price %></h3>
+<section class="cart">
   <%= render(@cart.line_items) %>
-
-  <div>
-    <div>
-      <%= button_to 'Empty Cart', @cart, method: :delete, data: { confirm: "Are you sure? " }, class: "danger" %>
-    </div>
-    <div>
-      <h4>
-        <strong>Total:</strong> <%= number_to_currency(@cart.total_price) %>
-      </h4>
-    </div>
-  </div>
+</section>
+<section class="cart-footer">
+  <% if @cart.line_items.count == 0 %>
+    <h3>Cart is Empty</h3>
+  <% else %>
+    <%= button_to 'Checkout', order_cart_path(@cart), method: :get, class: "ok" %>
+    <%= button_to 'Empty Cart', @cart, method: :delete, data: { confirm: "Are you sure? " }, class: "danger" %>
+  <% end %>
+  <%= button_to 'Keep Shopping', products_path, method: :get %>
 </section>

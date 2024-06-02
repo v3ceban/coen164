@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   resources :line_items
-  resources :carts
+  resources :carts do
+    post :checkout, on: :member
+    get :order, on: :member
+  end
   resources :products
   devise_for :users, controllers: {
     registrations: 'registrations'

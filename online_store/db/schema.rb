@@ -10,10 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_06_01_220529) do
+ActiveRecord::Schema[7.1].define(version: 2024_06_02_010405) do
   create_table "carts", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "completed"
+    t.datetime "processed_at"
+    t.string "address"
+    t.string "phone_number"
+    t.string "credit_card_number"
   end
 
   create_table "line_items", force: :cascade do |t|

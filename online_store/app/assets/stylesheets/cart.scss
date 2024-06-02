@@ -1,0 +1,38 @@
+@import "variables";
+
+.cart {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+  grid-gap: 20px;
+
+  .line_item {
+    background: white;
+    padding: 20px;
+    border-radius: 4px;
+    max-width: 600px;
+  }
+
+  .details {
+    display: grid;
+    grid-template-columns: auto auto;
+
+    .data {
+      p {
+        margin-bottom: 5px;
+      }
+    }
+
+    img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+  }
+}
+
+.cart-footer {
+  max-width: 500px;
+  margin: 0 0 0 auto;
+  text-align: center;
+}

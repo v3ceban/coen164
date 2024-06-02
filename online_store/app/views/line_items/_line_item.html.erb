@@ -1,12 +1,31 @@
-<div id="<%= dom_id line_item %>">
-  <p>
-    <strong>Product:</strong>
-    <%= line_item.product_id %>
-  </p>
-
-  <p>
-    <strong>Cart:</strong>
-    <%= line_item.cart_id %>
-  </p>
-
+<% product = Product.find(line_item.product_id) %>
+<div id="<%= dom_id line_item %>" class="line_item">
+  <h3>
+    <a href="<%= product_path(product) %>">
+      <%= product.name %>
+    </a>
+  </h3>
+  <section class="details">
+    <div class="data">
+      <p>
+        <strong>Description:</strong> <%= product.description.truncate 200 %>
+      </p>
+      <p>
+        <strong>Condition:</strong> <%= product.condition %>
+      </p>
+      <p>
+        <strong>Sold By:</strong> <%= product.user.name %>
+      </p>
+      <p>
+        <strong>Quantity:</strong> <%= line_item.quantity %>
+      </p>
+      <p>
+        <strong>Price:</strong> $<%= line_item.total_price %>
+      </p>
+    </div>
+    <a href="<%= product_path(product) %>">
+      <img src="<%= product.image %>" alt="<%= product.name %>">
+    </a>
+  </section>
+  <%= button_to 'Remove Item', line_item, method: :delete, data: { confirm: "Are you sure? " }, class: "danger" %>
 </div>

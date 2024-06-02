@@ -3,23 +3,15 @@
 # Carts Controller
 class CartsController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :invalid_cart
-  before_action :set_cart, only: %i[show edit update destroy]
+  before_action :set_cart, only: %i[show edit update destroy order checkout]
 
   # GET /carts or /carts.json
   def index
-    @carts = Cart.all
+    redirect_to root_path
   end
 
   # GET /carts/1 or /carts/1.json
   def show; end
-
-  # GET /carts/new
-  def new
-    @cart = Cart.new
-  end
-
-  # GET /carts/1/edit
-  def edit; end
 
   # POST /carts or /carts.json
   def create
@@ -55,8 +47,29 @@ class CartsController < ApplicationController
     session[:cart_id] = nil
 
     respond_to do |format|
-      format.html { redirect_to carts_url, notice: 'Cart was successfully destroyed.' }
+      format.html { redirect_to carts_url, notice: 'Cart was emptied.' }
       format.json { head :no_content }
+    end
+  end
+
+  # GET /carts/1/order
+  def order
+    if @cart.line_items.empty?
+      redirect_to root_path, alert: 'Cart is empty.'
+    else
+      render :checkout
+    end
+  end
+
+  # POST /carts/1/checkout
+  def checkout
+    @cart.assign_attributes(cart_params)
+    if @cart.valid?(:checkout) && @cart.save
+      @cart.update(completed: true, processed_at: Time.now)
+      session[:cart_id] = nil
+      redirect_to root_path, notice: "Thank you for your order! It will be shipped to #{@cart.address} in 24 hours."
+    else
+      render :checkout, status: :unprocessable_entity
     end
   end
 
@@ -69,7 +82,7 @@ class CartsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def cart_params
-    params.fetch(:cart, {})
+    params.require(:cart).permit(:address, :phone_number, :credit_card_number)
   end
 
   def invalid_cart

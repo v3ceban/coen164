@@ -17,28 +17,29 @@
           <%= image_tag "shop-solid.svg" %>
           <h1>Sell Your Stuff Here</h1>
         <% end  %>
-        <% if user_signed_in? %>
-          <ul>
-            <li>
-              <%= button_to 'Sell Product', new_product_path, method: :get %>
-            </li>
-            <li>
-              <%= button_to 'Account', edit_user_registration_path, method: :get %>
-            </li>
-            <li>
-              <%= button_to "Log Out", destroy_user_session_path, method: :delete, class: "danger" %>
-            </li>
-          </ul>
-        <% else %>
-          <ul>
-            <li>
-              <%= button_to "Login", new_user_session_path, method: :get %>
-            </li>
-            <li>
-              <%= button_to "Sign Up", new_user_registration_path, method: :get %>
-            </li>
-          </ul>
-        <% end %>
+        <ul>
+          <li>
+            <%= button_to "Cart #{@cart.line_items.sum(&:quantity) > 0 ? "(#{@cart.line_items.sum(&:quantity)})" : ""}", cart_path(@cart), method: :get %>
+          </li>
+          <% if user_signed_in? %>
+              <li>
+                <%= button_to 'Sell Product', new_product_path, method: :get %>
+              </li>
+              <li>
+                <%= button_to 'Account', edit_user_registration_path, method: :get %>
+              </li>
+              <li>
+                <%= button_to "Log Out", destroy_user_session_path, method: :delete, class: "danger" %>
+              </li>
+          <% else %>
+              <li>
+                <%= button_to "Login", new_user_session_path, method: :get %>
+              </li>
+              <li>
+                <%= button_to "Sign Up", new_user_registration_path, method: :get %>
+              </li>
+          <% end %>
+        </ul>
       </nav>
     </header>
     <main>
