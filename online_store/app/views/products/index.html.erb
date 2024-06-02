@@ -1,9 +1,29 @@
 <h2>Products</h2>
-<div id="products">
-  <% @products.each do |product| %>
-    <section class="product">
-      <%= render product %>
-      <%= button_to "Show Product", product, method: :get %>
-    </section>
-  <% end %>
-</div>
+<section class="home">
+  <% if @products.length == 0 %>
+    <p>No products found for your search, try again or <a href="/">browse all items</a></p>
+  <% else %>
+  <div id="products">
+    <% @products.each do |product| %>
+      <section class="product">
+        <%= render product %>
+        <%= button_to "Show Product", product, method: :get %>
+      </section>
+    <% end %>
+  </div>
+<% end %>
+  <div id="search">
+    <h3>Search</h3>
+    <%= form_tag(products_path, method: :get) do %>
+      <%= label_tag :search, "Name" %>
+      <%= text_field_tag :search, params[:search], placeholder: "Search by name or description" %>
+      <%= label_tag :min_price, "Min Price" %>
+      <%= number_field_tag :min_price, params[:min_price], min: 0 %>
+      <%= label_tag :max_price, "Max Price" %>
+      <%= number_field_tag :max_price, params[:max_price], min: 0 %>
+      <%= label_tag :category, "Category" %>
+      <%= select_tag :category, options_for_select(Product.distinct.pluck(:category), params[:category]), include_blank: true %>
+      <%= submit_tag "Search", name: nil %>
+    <% end %>
+  </div>
+</section>

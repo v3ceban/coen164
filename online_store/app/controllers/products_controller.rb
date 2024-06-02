@@ -9,6 +9,10 @@ class ProductsController < ApplicationController
   # GET /products or /products.json
   def index
     @products = Product.all.order(created_at: :desc)
+    @products = @products.search(params[:search]) if params[:search].present?
+    @products = @products.where('price >= ?', params[:min_price]) if params[:min_price].present?
+    @products = @products.where('price <= ?', params[:max_price]) if params[:max_price].present?
+    @products = @products.where(category: params[:category]) if params[:category].present?
   end
 
   # GET /products/1 or /products/1.json

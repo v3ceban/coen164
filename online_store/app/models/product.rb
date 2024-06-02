@@ -16,6 +16,10 @@ class Product < ApplicationRecord
   CATEGORY = %w[Clothing Shoes Accessories Food Pets Electronics Books Music Software Plants Toys Other].freeze
   CONDITION = %w[New Excellent Good Fair Poor].freeze
 
+  def self.search(search)
+    where('name LIKE ? OR description LIKE ?', "%#{search}%", "%#{search}%")
+  end
+
   private
 
   def not_refereced_by_any_line_item
